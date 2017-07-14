@@ -20,24 +20,18 @@ public class MemberServiceImpl implements MemberService{
 		member = new MemberBean();
 		map=new HashMap<>();
 		list = new ArrayList<MemberBean>(); // 3리스트를 초기화
-		
 	}
 	@Override
 	public String addMember(MemberBean bean) {
-		return (new MemberDAOIml().insert(bean)==1)?"가입성공":"실패";
+		return new MemberDAOIml().insert(bean)==1?"가입성공":"실패";
 	}
 	@Override
 	public List<MemberBean> list() {
-	
 		return new MemberDAOIml().selectAll();
 	}
 	@Override
 	public List<MemberBean> findByName(String name) {
-		MemberDAO dao=new  MemberDAOIml();
-		List<MemberBean> temp=new ArrayList<>();
-		
-		temp=dao.selectByName(name);
-	return temp;
+	return new  MemberDAOIml().selectByName(name);
 	}
 	@Override
 	public MemberBean findById(String id) {

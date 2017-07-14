@@ -30,8 +30,8 @@ public class MemberController {
 			case EXIT:
 				return;
 			case ADD:
-				String[] arr=JOptionPane.showInputDialog("ID/NAME/PASSWOD/SSN").split("/");
 				bean=new MemberBean();
+				String[] arr=JOptionPane.showInputDialog("ID/NAME/PASSWOD/SSN").split("/");
 				bean.setId(arr[0]);
 				bean.setName(arr[1]);
 				bean.setPassword(arr[2]);

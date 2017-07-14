@@ -34,7 +34,7 @@ public class MemberDAOIml implements MemberDAO {
 				.executeUpdate(
 				String.format("INSERT INTO %s(%s,%s,%s,%s,%s) VALUES('%s','%s','%s','%s',SYSDATE)",
 					DB.TABLE_MEMBER,
-					DB.MEMBER_ID,DB.MEMBER_NAME,DB.MEMBER_PASS,DB.MEMBER_SSN,DB.MEMBER_SSN,
+					DB.MEMBER_ID,DB.MEMBER_NAME,DB.MEMBER_PASS,DB.MEMBER_SSN,DB.MEMBER_REGDATE,
 					bean.getId(),bean.getName(),bean.getPassword(),bean.getSsn())
 					);
 		} catch (Exception e) {
